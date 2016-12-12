@@ -20,6 +20,7 @@ const argv = yargs
   .describe('create-rpm-package', 'Create .rpm package (Linux only)')
   .describe('compress-artifacts', 'Compress Atom binaries (and symbols on macOS)')
   .describe('install', 'Install Atom')
+  .describe('locale', 'Specify locale for localization')
   .wrap(yargs.terminalWidth())
   .argv
 
@@ -55,7 +56,7 @@ transpileBabelPaths()
 transpileCoffeeScriptPaths()
 transpileCsonPaths()
 transpilePegJsPaths()
-localize()
+localize(argv.locale)
 generateModuleCache()
 prebuildLessCache()
 generateMetadata()
