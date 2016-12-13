@@ -65,7 +65,7 @@ export default class ReopenProjectMenuManager {
 
   static createProjectsMenu (projects) {
     return {
-      label: 'File',
+      label: 'File(&F)',
       submenu: [
         {
           label: 'Reopen Project',
